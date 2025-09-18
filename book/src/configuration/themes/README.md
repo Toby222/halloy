@@ -16,7 +16,7 @@ theme = { light = "ferra-light", dark = "ferra" }
 theme = { light = ["ferra-light", "booberry-light"], dark = ["ferra", "booberry"] }
 ```
 
-> ⚠️  `theme` is a root key, so it must be placed before every section.
+> ⚠️ `theme` is a root key, so it must be placed before every section.
 
 ## `theme`
 
@@ -27,8 +27,8 @@ When multiple themes are specified, Halloy will randomly select one each time th
 - **type**: string, array of strings, or object
 - **values**: `"<string>"`, `["<string>", "<string>"]`, `{ light = "<string>", dark = "<string>" }`, `{ light = ["<string>", "<string>"], dark = ["<string>", "<string>"] }`
 - **default**: `"ferra"`
-  
-> 💡  See all community created themes [here](./community.md) and base16 themes [here](./base16.md).
+
+> 💡 See all community created themes [here](./community.md) and base16 themes [here](./base16.md).
 
 ## Custom themes
 
@@ -42,9 +42,9 @@ theme = "foobar"
 # .. rest of the configuration file.
 ```
 
-> 💡  Halloy has a built in theme editor which makes theme creation easier
+> 💡 Halloy has a built in theme editor which makes theme creation easier
 
- Each `"<string>"` is expected to be a valid hex color. If invalid, or if the key is removed, the color will fallback to transparent. A custom theme is structured as follows:
+Each `"<string>"` is expected to be a valid hex color. If invalid, or if the key is removed, the color will fallback to transparent. A custom theme is structured as follows:
 
 ```toml
 [general]
@@ -114,4 +114,5 @@ url = "<string>"
 # wallops = "<string>"
 default = "<string>"
 ```
-> 💡  The default Ferra theme toml file can be viewed [here](https://github.com/squidowl/halloy/blob/main/assets/themes/ferra.toml).
+
+> 💡 The default Ferra theme toml file can be viewed [here](https://github.com/squidowl/halloy/blob/main/assets/themes/ferra.toml).

@@ -64,13 +64,13 @@ irc = { version = "0.1.0", path = "irc" }
 notify-rust = "4.11"
 fern = "0.7.1"
 iced = { version = "0.14.0-dev", default-features = false, features = [
-    "wgpu",
-    "tiny-skia",
-    "fira-sans",
-    "tokio",
-    "lazy",
-    "advanced",
-    "image",
+  "wgpu",
+  "tiny-skia",
+  "fira-sans",
+  "tokio",
+  "lazy",
+  "advanced",
+  "image",
 ] }
 unicode-segmentation = "1.6"
 open = "5.0.1"
@@ -80,20 +80,20 @@ rodio = "0.21.0"
 humantime = "2.2.0"
 strsim = "0.11.1"
 rfd = { version = "0.15.2", default-features = false, features = [
-    "xdg-portal",
-    "tokio",
+  "xdg-portal",
+  "tokio",
 ] }
 uuid = { version = "1.17", features = ["v4"] }
 mundy = { version = "0.1.9", default-features = false, features = [
-    "color-scheme",
-    "tokio",
-    "log",
+  "color-scheme",
+  "tokio",
+  "log",
 ] }
 
 [target.'cfg(windows)'.dependencies]
 image = "0.24.6"
 iced = { version = "0.14.0-dev", default-features = false, features = [
-    "web-colors",
+  "web-colors",
 ] }
 
 [target.'cfg(windows)'.build-dependencies]
@@ -145,15 +145,13 @@ unnecessary_wraps = "deny"
 
 [workspace.metadata.typos.default]
 extend-ignore-re = [
-    "(?Rm)^.*(#|//)\\s*spellchecker:disable-line$", # Ignore lines with trailing spellchecker:disable-line
+  "(?Rm)^.*(#|//)\\s*spellchecker:disable-line$", # Ignore lines with trailing spellchecker:disable-line
 ]
 extend-ignore-identifiers-re = [
-    "ERR_[A-Z]+", # IRC Error Numeric
-    "RPL_[A-Z]+", # IRC Reply Numeric
-    "TehPeGaSuS",
+  "ERR_[A-Z]+", # IRC Error Numeric
+  "RPL_[A-Z]+", # IRC Reply Numeric
+  "TehPeGaSuS",
 ]
 
 [workspace.metadata.typos.files]
-extend-exclude = [
-  "data/tests/message/*.json",
-]
+extend-exclude = ["data/tests/message/*.json"]

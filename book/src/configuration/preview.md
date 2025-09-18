@@ -44,7 +44,7 @@ Request timeout in milliseconds. Defaults is 10s.
 [preview.request]
 timeout_ms = 10000
 ```
- 
+
 ### `max_image_size`
 
 Max image size in bytes. This prevents downloading responses that are too big. Default is 10mb.
@@ -97,7 +97,6 @@ Number of milliseconds to wait before requesting another preview when number of 
 delay_ms = 500
 ```
 
-
 ## `image`
 
 Specific image preview settings.
@@ -114,7 +113,6 @@ Action when clicking on a image. `open-url` will open the image in the browser, 
 [preview.image]
 action = "preview"
 ```
-
 
 ### `include`
 
@@ -144,7 +142,7 @@ If you pass `["#halloy"]`, the channel `#halloy` will not show image previews. Y
 exclude = []
 ```
 
-### Example 
+### Example
 
 ```toml
 [preview.image]
@@ -183,7 +181,6 @@ If you pass `["#halloy"]`, the channel `#halloy` will show image previews. The i
 include = []
 ```
 
-
 ### `exclude`
 
 Exclude card previews from channels & queries.
@@ -197,11 +194,11 @@ If you pass `["#halloy"]`, the channel `#halloy` will not show image previews. Y
 [preview.card]
 exclude = []
 ```
-### Example 
+
+### Example
 
 ```toml
 [preview.card]
 exclude = ["*"] # hide card previews in all channels
 include = ["#halloy"] # show card previews in #halloy
 ```
-

@@ -2,9 +2,9 @@
 
 Application wide font settings.
 
-> ⚠️  Changes to font settings require an application restart to take effect.
+> ⚠️ Changes to font settings require an application restart to take effect.
 
-> 💡  If Halloy is unable to load the specified font & weight, an fallback font may be used.  If the font looks wrong, double-check the family name and that the font family has the specified weight.
+> 💡 If Halloy is unable to load the specified font & weight, an fallback font may be used. If the font looks wrong, double-check the family name and that the font family has the specified weight.
 
 ## `family`
 
@@ -49,7 +49,7 @@ weight = "light"
 
 ## `bold-weight`
 
-Bold font weight.  If not set, then the font weight three steps above the regular font weight (e.g. font weight `"light"` → bold font weight `"semibold"`).
+Bold font weight. If not set, then the font weight three steps above the regular font weight (e.g. font weight `"light"` → bold font weight `"semibold"`).
 
 ```toml
 # Type: string

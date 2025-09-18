@@ -2,12 +2,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
-    crane.url = "github:ipetkov/crane";
-
-    pre-commit-hooks = {
-      url = "github:cachix/git-hooks.nix";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    crane.url = "github:ipetkov/crane";
 
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -19,8 +19,8 @@
     {
       self,
       nixpkgs,
+      treefmt-nix,
       crane,
-      pre-commit-hooks,
       rust-overlay,
     }:
     let
@@ -34,62 +34,57 @@
         f:
         nixpkgs.lib.genAttrs supportedSystems (
           system:
-          f rec {
-            pkgs = import nixpkgs {
-              inherit system;
-              overlays = [ (import rust-overlay) ];
-            };
+          f (
+            rec {
+              pkgs = import nixpkgs {
+                inherit system;
+                overlays = [ (import rust-overlay) ];
+              };
 
-            rustToolchainFor = pkgs: pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
-            rustToolchain = rustToolchainFor pkgs;
+              rustToolchainFor = pkgs: pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
+              rustToolchain = rustToolchainFor pkgs;
 
-            # NB: we don't need to overlay our custom toolchain for the *entire*
-            # pkgs (which would require rebuidling anything else which uses rust).
-            # Instead, we just want to update the scope that crane will use by appending
-            # our specific toolchain there.
-            craneLib = (crane.mkLib pkgs).overrideToolchain rustToolchainFor;
-          }
+              # NB: we don't need to overlay our custom toolchain for the *entire*
+              # pkgs (which would require rebuidling anything else which uses rust).
+              # Instead, we just want to update the scope that crane will use by appending
+              # our specific toolchain there.
+              craneLib = (crane.mkLib pkgs).overrideToolchain rustToolchainFor;
+
+            }
+            // {
+              treefmt-nix = import treefmt-nix;
+            }
+          )
         );
     in
     {
       formatter = forEachSupportedSystem (
-        { pkgs, ... }: pkgs.writeShellScriptBin "format" "${pkgs.pre-commit}/bin/pre-commit"
-      );
-      checks = forEachSupportedSystem (
-        { pkgs, craneLib, ... }:
         {
-          pre-commit-check = pre-commit-hooks.lib.${pkgs.system}.run {
-            src = ./.;
-            # See all at https://devenv.sh/reference/options/#git-hookshooks
-            hooks = {
-              nixfmt-rfc-style.enable = true;
-              clippy = {
-                enable = true;
-                packageOverrides = {
-                  cargo = craneLib.cargo;
-                  clippy = craneLib.clippy;
-                };
-              };
-              rustfmt = {
-                enable = true;
-                packageOverrides = {
-                  cargo = craneLib.cargo;
-                  rustfmt = craneLib.rustfmt;
-                };
-              };
-            };
+          pkgs,
+          treefmt-nix,
+          rustToolchain,
+          ...
+        }:
+        treefmt-nix.mkWrapper pkgs {
+          programs = {
+            # mdformat.enable = true;
+            nixfmt.enable = true;
+            prettier.enable = true;
+            rustfmt.enable = true;
+            taplo.enable = true;
           };
         }
       );
       devShells = forEachSupportedSystem (
         { pkgs, rustToolchain, ... }:
         {
-          default = pkgs.mkShell rec {
-            inherit (self.checks.${pkgs.system}.pre-commit-check) shellHook;
-            packages =
-              (self.checks.${pkgs.system}.pre-commit-check.enabledPackages)
-              ++ (with pkgs; [
+          default = pkgs.mkShellNoCC rec {
+            packages = (
+              with pkgs;
+              [
                 nixd
+                nixfmt
+                self.formatter.${pkgs.system}
                 rustToolchain
 
                 pkg-config
@@ -104,7 +99,8 @@
                 xorg.libX11
                 xorg.libxcb
                 xorg.libXcursor
-              ]);
+              ]
+            );
             LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath packages;
           };
         }

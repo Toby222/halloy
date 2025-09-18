@@ -2,7 +2,7 @@
 
 You can define multiple server sections in the configuration file. Each server section must have a unique name, which is used as the identifier in the `[servers.<name>]` format.
 
-Eg: 
+Eg:
 
 ```toml
 [servers.quakenet]
@@ -91,7 +91,7 @@ nick_identify_syntax = ""
 
 ## `alt_nicks`
 
-Alternative nicknames for the client, if the default is taken.  
+Alternative nicknames for the client, if the default is taken.
 
 ```toml
 # Type: array of strings
@@ -114,7 +114,6 @@ The client's username.
 [servers.<name>]
 username = ""
 ```
-
 
 ## `realname`
 
@@ -222,7 +221,7 @@ A list of nicknames to ignore. Optionally, the nickname may be preceded by a cha
 
 [servers.<name>.filters]
 ignore = [
-"ignored_user", 
+"ignored_user",
 "another_user",
 "#specific-channel user_only_for_channel"
 ]
@@ -321,7 +320,7 @@ ghost_sequence = ["REGAIN"]
 
 ## `umodes`
 
-User modestring to set on connect.  
+User modestring to set on connect.
 
 ```toml
 # Type: string
@@ -383,7 +382,7 @@ Commands which are executed once connected, in the order they are specified. The
 [servers.<name>]
 on_connect = ["/msg NickServ IDENTIFY foo bar", "/delay 2", "/join registered-club"]
 ```
-  
+
 ## `who_poll_enabled`
 
 Whether or not to WHO polling is enabled.
@@ -399,7 +398,7 @@ who_poll_enabled = true
 
 ## `who_poll_interval`
 
-WHO poll interval (in seconds) for servers without away-notify.  Specifically, the time between individual WHO requests. Will be increased automatically if the server sends a rate-limiting message.
+WHO poll interval (in seconds) for servers without away-notify. Specifically, the time between individual WHO requests. Will be increased automatically if the server sends a rate-limiting message.
 
 ```toml
 # Type: integer
@@ -409,7 +408,6 @@ WHO poll interval (in seconds) for servers without away-notify.  Specifically, t
 [servers.<name>]
 who_poll_interval = 2
 ```
-
 
 ## `monitor`
 
@@ -441,7 +439,7 @@ chathistory = true
 
 ## `sasl.plain`
 
-Plain SASL auth using a username and password 
+Plain SASL auth using a username and password
 
 ### `username`
 
@@ -539,4 +537,5 @@ key = "/path/to/your/private_key.pem"
 ```
 
 [^1]: Windows path strings should usually be specified as literal strings (e.g. `'C:\Users\Default\'`), otherwise directory separators will need to be escaped (e.g. `"C:\\Users\\Default\\"`).
+
 [^2]: Relative paths are prefixed with the config directory (i.e. if you have your config.toml in `/home/me/.config/halloy/config.toml`, path `.passwd/libera` will be converted to `/home/me/.config/halloy/.passwd/libera`).

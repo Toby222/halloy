@@ -2,9 +2,9 @@
 
 To edit configuration parameters, create a `config.toml` file located in your configuration directory:
 
-* Windows: `%AppData%\halloy`
-* Mac: `~/Library/Application Support/halloy` or `$HOME/.config/halloy`
-* Linux: `$XDG_CONFIG_HOME/halloy`, `$HOME/.config/halloy` or `$HOME/.var/app/org.squidowl.halloy/config` (Flatpak)
+- Windows: `%AppData%\halloy`
+- Mac: `~/Library/Application Support/halloy` or `$HOME/.config/halloy`
+- Linux: `$XDG_CONFIG_HOME/halloy`, `$HOME/.config/halloy` or `$HOME/.var/app/org.squidowl.halloy/config` (Flatpak)
 
 > 💡 You can easily open the config file directory from command bar in Halloy
 

@@ -160,7 +160,8 @@ Tor proxy settings. Utilizes [Arti](https://arti.torproject.org/) to integrate T
 It accepts no further configuration.
 
 **Note:**
-- Does not integrate into a pre-existing Tor setup.  To utilize an existing Tor daemon, use [`[proxy.socks5]`](#proxysocks5) instead.
+
+- Does not integrate into a pre-existing Tor setup. To utilize an existing Tor daemon, use [`[proxy.socks5]`](#proxysocks5) instead.
 - Tor support is **not included by default**. You must build Halloy with the `tor` feature to use this proxy type. See [Optional Features](../guides/optional-features.md) for build instructions.
 
 ## Example

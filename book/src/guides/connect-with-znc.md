@@ -10,10 +10,10 @@ password = "<your-password>"
 
 # Depending on your ZNC setup you may need to apply these extra settings:
 
-# Does your znc use a self-signed or expired certificate? See: 
+# Does your znc use a self-signed or expired certificate? See:
 # https://halloy.chat/configuration/servers.html#dangerously_accept_invalid_certs
 
-# Does your znc listen on a different port? See: 
+# Does your znc listen on a different port? See:
 # https://halloy.chat/configuration/servers.html#port
 
 ```

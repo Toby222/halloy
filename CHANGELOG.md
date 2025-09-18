@@ -49,7 +49,7 @@ Thanks:
 
 Added:
 
-- Clear buffers with `/clear` command 
+- Clear buffers with `/clear` command
 - Notification indicator on sidebar menu for application updates and file transfers
 
 Fixed:
@@ -204,7 +204,7 @@ Added:
 
 Fixed:
 
-- [`infinite_scroll`](https://halloy.squidowl.org/configuration/buffer.html?highlight=infinite#infinite_scroll) was defaulting to `false`, contrary to its documented default value.  Now defaults to `true`
+- [`infinite_scroll`](https://halloy.squidowl.org/configuration/buffer.html?highlight=infinite#infinite_scroll) was defaulting to `false`, contrary to its documented default value. Now defaults to `true`
 - A rare issue where the app opens smaller than when closed
 - Closing the application while it is minimized (on Windows) causes it to open with the wrong size and position next time
 - TLS connection issue on Windows (10+)
@@ -245,11 +245,13 @@ Changed:
 # 2024.14 (2024-10-29)
 
 Fixed:
-  - CPU spiking due to memory leak in upstream crate.
+
+- CPU spiking due to memory leak in upstream crate.
 
 # 2024.13 (2024-10-27)
 
 Added:
+
 - Highlight buffer to view highlights across all servers. Can be opened via sidebar button or command bar.
 - Logging buffer to view logs. Can be opened via sidebar button or command bar.
 - New hotkeys
@@ -331,8 +333,6 @@ Removed:
 
 - Removed `hex` configuration option for server messages and nicknames.
   - `hex` was previously used to overwrite a color value. This is now done through the new theme format.
-
-
 
 # 2024.10 (2024-08-04)
 

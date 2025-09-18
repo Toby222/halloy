@@ -26,7 +26,6 @@ Following notifications are available:
 | `monitored_offline`     | Triggered when a user you're monitoring is offline | N/A                               |
 | `reconnected`           | Triggered when a server reconnects                 | N/A                               |
 
-
 ## `sound`
 
 Notification sound.

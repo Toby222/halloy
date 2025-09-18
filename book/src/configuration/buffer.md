@@ -9,17 +9,17 @@ Buffer settings for Halloy.
 2. [Chathistory](#bufferchathistory) - IRCv3 Chat History extension settings
 3. [Commands](#buffercommands) - Commands settings
 4. [Backlog Separator](#bufferbacklog_separator) - Customize when the backlog separator is displayed within a buffer
-4. [Date Separators](#bufferdate_separators) - Customize how date separators are displayed within a buffer
-5. [Emojis](#bufferemojis) - Emojis settings
-6. [Internal Messages](#bufferinternal_messages) - Internal messages are messages sent from Halloy itself
-7. [Mark as Read](#buffermark_as_read) - When to automatically mark a buffer as read
-8. [Nickname](#buffernickname) - Customize how nicknames are displayed within a buffer
-9. [Server Messages](#bufferserver_messages) - Server messages are messages sent from an IRC server.
-10. [Status Message Prefix](#bufferstatus_message_prefix) - Status message prefix settings
-11. [Text Input](#buffertext_input) - Customize the text input for in buffers
-12. [Timestamp](#buffertimestamp) - Customize how timestamps are displayed within a buffer
-13. [Url](#bufferurl) - URLs in buffers
-14. [Line Spacing](#line_spacing) - Line spacing in buffers
+5. [Date Separators](#bufferdate_separators) - Customize how date separators are displayed within a buffer
+6. [Emojis](#bufferemojis) - Emojis settings
+7. [Internal Messages](#bufferinternal_messages) - Internal messages are messages sent from Halloy itself
+8. [Mark as Read](#buffermark_as_read) - When to automatically mark a buffer as read
+9. [Nickname](#buffernickname) - Customize how nicknames are displayed within a buffer
+10. [Server Messages](#bufferserver_messages) - Server messages are messages sent from an IRC server.
+11. [Status Message Prefix](#bufferstatus_message_prefix) - Status message prefix settings
+12. [Text Input](#buffertext_input) - Customize the text input for in buffers
+13. [Timestamp](#buffertimestamp) - Customize how timestamps are displayed within a buffer
+14. [Url](#bufferurl) - URLs in buffers
+15. [Line Spacing](#line_spacing) - Line spacing in buffers
 
 ## `[buffer.channel]`
 
@@ -252,7 +252,7 @@ Customize how date separators are displayed within a buffer
 
 ### `format`
 
-Controls the date format. The expected format is [strftime](https://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html).  
+Controls the date format. The expected format is [strftime](https://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html).
 
 ```toml
 # Type: string
@@ -423,7 +423,7 @@ on_application_exit = false
 
 ### `on_buffer_close`
 
-When closing a buffer (a buffer is considered closed when it is replaced or if it is open when the application exits).  If set to `"scrolled-to-bottom"` then a buffer will only be marked as read if it is scrolled to the bottom when closing (i.e. if the most recent messages are visible).
+When closing a buffer (a buffer is considered closed when it is replaced or if it is open when the application exits). If set to `"scrolled-to-bottom"` then a buffer will only be marked as read if it is scrolled to the bottom when closing (i.e. if the most recent messages are visible).
 
 ```toml
 # Type: boolean
@@ -525,7 +525,7 @@ color = "unique"
 
 ### `offline`
 
-Controls the appearance of offline nicknames.  
+Controls the appearance of offline nicknames.
 
 ```toml
 # Type: string or object
@@ -755,8 +755,8 @@ Customize autocomplete.
 
 Ordering that autocomplete uses to select from matching users.
 
-- `"recent"`: Autocomplete users by their last message in the channel;  the user with most recent message autocompletes first, then increasingly older messages.  Users with no seen messages are matched last, in the order specified by `sort_direction`.
-- `"alpha"`: Autocomplete users based on alphabetical ordering of potential matches.  Ordering is asecnding/descinding based on `sort_direction`.
+- `"recent"`: Autocomplete users by their last message in the channel; the user with most recent message autocompletes first, then increasingly older messages. Users with no seen messages are matched last, in the order specified by `sort_direction`.
+- `"alpha"`: Autocomplete users based on alphabetical ordering of potential matches. Ordering is asecnding/descinding based on `sort_direction`.
 
 ```toml
 # Type: string

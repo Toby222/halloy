@@ -12,12 +12,11 @@ username = "<your-username>"
 password = "<your-password>"
 ```
 
-> 💡  as of 2025.1 Halloy supports [`chathistory`](../configuration/servers.md#chathistory), so the machine name (like `@desktop`) is no longer needed when `chathistory` is enabled
-
+> 💡 as of 2025.1 Halloy supports [`chathistory`](../configuration/servers.md#chathistory), so the machine name (like `@desktop`) is no longer needed when `chathistory` is enabled
 
 ## Using bouncer networks
 
-> ⚠️  The soju bouncer networks specification *requires* that SASL be used. If you do not use SASL, you must add servers in the legacy fashion.
+> ⚠️ The soju bouncer networks specification _requires_ that SASL be used. If you do not use SASL, you must add servers in the legacy fashion.
 
 As of 2025.9 Halloy supports [`bouncer networks`](https://codeberg.org/emersion/soju/src/branch/master/doc/ext/bouncer-networks.md) so connecting to individual servers is no longer needed. Instead, Halloy can communicate with soju to determine what networks you are currently connected to and then automatically add them in the UI.
 
@@ -32,7 +31,6 @@ port = 6697
 username = "<your-username>/irc.libera.chat"
 password = "<your-password>"
 ```
-
 
 ## Using chathistory
 

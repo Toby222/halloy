@@ -66,10 +66,7 @@
     "content": {
       "Fragments": [
         {
-          "HighlightNick": [
-            "our_nick",
-            "our_nick"
-          ]
+          "HighlightNick": ["our_nick", "our_nick"]
         },
         {
           "Text": " wants to generate an action message for testing XD"
@@ -179,10 +176,7 @@
           "Text": "⟶ "
         },
         {
-          "User": [
-            "WiZ",
-            "WiZ"
-          ]
+          "User": ["WiZ", "WiZ"]
         },
         {
           "Text": " has joined the channel"
@@ -219,10 +213,7 @@
           "Text": "⟵ "
         },
         {
-          "User": [
-            "`whammer`!warhammer@40k",
-            "`whammer`"
-          ]
+          "User": ["`whammer`!warhammer@40k", "`whammer`"]
         },
         {
           "Text": " (warhammer@40k) has left the channel"
@@ -307,10 +298,7 @@
           "Text": "Need a highlight "
         },
         {
-          "HighlightNick": [
-            "our_nick",
-            "our_nick"
-          ]
+          "HighlightNick": ["our_nick", "our_nick"]
         },
         {
           "Text": "?"
@@ -760,10 +748,7 @@
           "Text": "⟵ "
         },
         {
-          "User": [
-            "+nieve!snow@yeti",
-            "nieve"
-          ]
+          "User": ["+nieve!snow@yeti", "nieve"]
         },
         {
           "Text": " (snow@yeti) has quit (see you later our_nick)"
@@ -800,10 +785,7 @@
           "Text": "⟵ "
         },
         {
-          "User": [
-            "+nieve!snow@yeti",
-            "nieve"
-          ]
+          "User": ["+nieve!snow@yeti", "nieve"]
         },
         {
           "Text": " (snow@yeti) has quit (see you later our_nick)"
@@ -837,19 +819,13 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "dan",
-            "dan"
-          ]
+          "User": ["dan", "dan"]
         },
         {
           "Text": " is now known as "
         },
         {
-          "User": [
-            "dandadan",
-            "dandadan"
-          ]
+          "User": ["dandadan", "dandadan"]
         },
         {
           "Text": ""
@@ -883,19 +859,13 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "dan",
-            "dan"
-          ]
+          "User": ["dan", "dan"]
         },
         {
           "Text": " is now known as "
         },
         {
-          "User": [
-            "dandadan",
-            "dandadan"
-          ]
+          "User": ["dandadan", "dandadan"]
         },
         {
           "Text": ""
@@ -928,19 +898,13 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "dan",
-            "dan"
-          ]
+          "User": ["dan", "dan"]
         },
         {
           "Text": " is now known as "
         },
         {
-          "User": [
-            "dandadan",
-            "dandadan"
-          ]
+          "User": ["dandadan", "dandadan"]
         },
         {
           "Text": ""
@@ -977,10 +941,7 @@
           "Text": "You're now known as "
         },
         {
-          "User": [
-            "our_new_nick",
-            "our_new_nick"
-          ]
+          "User": ["our_new_nick", "our_new_nick"]
         },
         {
           "Text": ""
@@ -1017,10 +978,7 @@
           "Text": "You're now known as "
         },
         {
-          "User": [
-            "our_new_nick",
-            "our_new_nick"
-          ]
+          "User": ["our_new_nick", "our_new_nick"]
         },
         {
           "Text": ""
@@ -1056,10 +1014,7 @@
           "Text": "You're now known as "
         },
         {
-          "User": [
-            "our_new_nick",
-            "our_new_nick"
-          ]
+          "User": ["our_new_nick", "our_new_nick"]
         },
         {
           "Text": ""
@@ -1095,10 +1050,7 @@
           "Text": "You're now known as "
         },
         {
-          "User": [
-            "our_new_nick",
-            "our_new_nick"
-          ]
+          "User": ["our_new_nick", "our_new_nick"]
         },
         {
           "Text": ""
@@ -1129,10 +1081,7 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "`whammer`",
-            "`whammer`"
-          ]
+          "User": ["`whammer`", "`whammer`"]
         },
         {
           "Text": " invited you to join "
@@ -1166,10 +1115,7 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "`whammer`",
-            "`whammer`"
-          ]
+          "User": ["`whammer`", "`whammer`"]
         },
         {
           "Text": " invited you to join "
@@ -1228,10 +1174,7 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "+nieve!snow@yeti",
-            "nieve"
-          ]
+          "User": ["+nieve!snow@yeti", "nieve"]
         },
         {
           "Text": " (snow@yeti) changed host to lava@troll"
@@ -1265,10 +1208,7 @@
     "content": {
       "Fragments": [
         {
-          "User": [
-            "+nieve!snow@yeti",
-            "nieve"
-          ]
+          "User": ["+nieve!snow@yeti", "nieve"]
         },
         {
           "Text": " (snow@yeti) changed host to lava@troll"
@@ -1306,10 +1246,7 @@
           "Text": "Need a highlight "
         },
         {
-          "HighlightNick": [
-            "our_nick",
-            "our_nick"
-          ]
+          "HighlightNick": ["our_nick", "our_nick"]
         },
         {
           "Text": "?"
@@ -1350,10 +1287,7 @@
           "Text": "Need a highlight "
         },
         {
-          "HighlightNick": [
-            "our_nick",
-            "our_nick"
-          ]
+          "HighlightNick": ["our_nick", "our_nick"]
         },
         {
           "Text": "?"

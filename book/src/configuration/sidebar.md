@@ -168,4 +168,3 @@ Changes the highlight unread icon size.
 [sidebar.unread_indicator]
 highlight_icon_size = 8
 ```
-

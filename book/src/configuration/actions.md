@@ -1,6 +1,6 @@
 # `[actions]`
 
-Application-wide actions;  how user actions should be enacted.
+Application-wide actions; how user actions should be enacted.
 
 1. [Buffer](#actionsbuffer) - Buffer actions
 2. [Sidebar](#actionssidebar) - Sidebar actions

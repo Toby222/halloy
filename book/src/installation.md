@@ -3,13 +3,13 @@
 - [Pre-built binaries](#pre-built-binaries)
 - [Packaging status](#packaging-status)
 - [macOS](#macos)
-    - [Homebrew](#homebrew)
-    - [MacPorts](#macports)
+  - [Homebrew](#homebrew)
+  - [MacPorts](#macports)
 - [Linux](#linux)
-    - [Flatpak](#flatpak)
-    - [Snapcraft](#snapcraft)
+  - [Flatpak](#flatpak)
+  - [Snapcraft](#snapcraft)
 - [Windows](#windows)
-    - [Winget](#winget)
+  - [Winget](#winget)
 - [Build from source](#build-from-source)
 
 > 💡 To get the latest nightly version of Halloy, you can [build from source](#build-from-source).
@@ -31,7 +31,7 @@ The following third party repositories are available for macOS
 #### Homebrew
 
 ```
-brew install --cask halloy 
+brew install --cask halloy
 ```
 
 #### MacPorts
@@ -66,9 +66,9 @@ Clone the Halloy GitHub repository into a directory of your choice and build wit
 
 Requirements:
 
-* [Rust toolchain](https://www.rust-lang.org/tools/install)
-* [Git version control system](https://git-scm.com/)
-* Packages:
+- [Rust toolchain](https://www.rust-lang.org/tools/install)
+- [Git version control system](https://git-scm.com/)
+- Packages:
   - Fedora-based distributions: `alsa-lib-devel openssl-devel libxcb-devel`
   - Debian-based distributions: `librust-alsa-sys-dev libssl-dev libxcb1-dev`
 
@@ -85,7 +85,7 @@ cargo run --release
 
 #### Install from Source
 
-The script `install-linux.sh` in the `scripts` directory of the Halloy repository will build and install Halloy on Linux systems (with the same requirements as building from source).  By default the script will install Halloy in the `~/.local/` base directory (i.e. the executable will be put in `~/.local/bin/`).  To change the installation base directory, provide `install-linux.sh` with the long flag <nobr>`--prefix=<base/directory>`</nobr>.
+The script `install-linux.sh` in the `scripts` directory of the Halloy repository will build and install Halloy on Linux systems (with the same requirements as building from source). By default the script will install Halloy in the `~/.local/` base directory (i.e. the executable will be put in `~/.local/bin/`). To change the installation base directory, provide `install-linux.sh` with the long flag <nobr>`--prefix=<base/directory>`</nobr>.
 
 ```sh
 git clone https://github.com/squidowl/halloy.git

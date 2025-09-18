@@ -35,6 +35,9 @@ The argument(s) for a command are shown in [tooltips](configuration/tooltips.md)
 | `whois`      |            | Retrieve information about user(s)                                |
 
 [^1]: The `channel` argument can be skipped when used in a channel buffer to target the channel in the buffer.
+
 [^2]: The `nick` argument can be skipped when used in a query buffer to target the other user in the buffer.
+
 [^3]: The `target` argument can be skipped; in a channel buffer it will target the channel in the buffer, in a query buffer it will target the other user in the buffer, and in a server buffer it will target your user.
+
 [^4]: The `targets` argument can be skipped; in a channel or query buffer it will target the current buffer.
